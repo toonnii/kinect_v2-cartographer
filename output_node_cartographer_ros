@@ -1,0 +1,55 @@
+routenzug@routenzug-Nuvo-7000-Series:~$ roslaunch cartographer_ros kinect-v2_rgbd_2D0_ohne_imu.launch 
+... logging to /home/routenzug/.ros/log/c0bdf5be-a9f1-11e9-ad96-78d004277d70/roslaunch-routenzug-Nuvo-7000-Series-20995.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+WARNING: disk usage in log directory [/home/routenzug/.ros/log] is over 1GB.
+It's recommended that you use the 'rosclean' command.
+
+started roslaunch server http://routenzug-Nuvo-7000-Series:37101/
+
+SUMMARY
+========
+
+PARAMETERS
+ * /robot_description: <?xml version="1....
+ * /rosdistro: kinetic
+ * /rosversion: 1.12.14
+
+NODES
+  /
+    cartographer_node (cartographer_ros/cartographer_node)
+    cartographer_occupancy_grid_node (cartographer_ros/cartographer_occupancy_grid_node)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
+    rviz (rviz/rviz)
+
+ROS_MASTER_URI=http://localhost:11311
+
+process[robot_state_publisher-1]: started with pid [21012]
+process[cartographer_node-2]: started with pid [21013]
+process[rviz-3]: started with pid [21039]
+process[cartographer_occupancy_grid_node-4]: started with pid [21040]
+[ INFO] [1563519161.744080084]: I0719 08:52:41.000000 21013 configuration_file_resolver.cc:41] Found '/home/routenzug/cartographer_ros_ws/install_isolated/share/cartographer_ros/configuration_files/kinect-v2_rgbd_2D0_ohne_imu.lua' for 'kinect-v2_rgbd_2D0_ohne_imu.lua'.
+[ INFO] [1563519161.819766329]: I0719 08:52:41.000000 21013 configuration_file_resolver.cc:41] Found '/home/routenzug/cartographer_ros_ws/install_isolated/share/cartographer/configuration_files/map_builder.lua' for 'map_builder.lua'.
+[ INFO] [1563519161.819827569]: I0719 08:52:41.000000 21013 configuration_file_resolver.cc:41] Found '/home/routenzug/cartographer_ros_ws/install_isolated/share/cartographer/configuration_files/map_builder.lua' for 'map_builder.lua'.
+[ INFO] [1563519161.827765297]: I0719 08:52:41.000000 21013 configuration_file_resolver.cc:41] Found '/home/routenzug/cartographer_ros_ws/install_isolated/share/cartographer/configuration_files/pose_graph.lua' for 'pose_graph.lua'.
+[ INFO] [1563519161.827838752]: I0719 08:52:41.000000 21013 configuration_file_resolver.cc:41] Found '/home/routenzug/cartographer_ros_ws/install_isolated/share/cartographer/configuration_files/pose_graph.lua' for 'pose_graph.lua'.
+[ INFO] [1563519161.835241497]: I0719 08:52:41.000000 21013 configuration_file_resolver.cc:41] Found '/home/routenzug/cartographer_ros_ws/install_isolated/share/cartographer/configuration_files/trajectory_builder.lua' for 'trajectory_builder.lua'.
+[ INFO] [1563519161.835340495]: I0719 08:52:41.000000 21013 configuration_file_resolver.cc:41] Found '/home/routenzug/cartographer_ros_ws/install_isolated/share/cartographer/configuration_files/trajectory_builder.lua' for 'trajectory_builder.lua'.
+[ INFO] [1563519161.843226906]: I0719 08:52:41.000000 21013 configuration_file_resolver.cc:41] Found '/home/routenzug/cartographer_ros_ws/install_isolated/share/cartographer/configuration_files/trajectory_builder_2d.lua' for 'trajectory_builder_2d.lua'.
+[ INFO] [1563519161.843281558]: I0719 08:52:41.000000 21013 configuration_file_resolver.cc:41] Found '/home/routenzug/cartographer_ros_ws/install_isolated/share/cartographer/configuration_files/trajectory_builder_2d.lua' for 'trajectory_builder_2d.lua'.
+[ INFO] [1563519161.845833512]: I0719 08:52:41.000000 21013 configuration_file_resolver.cc:41] Found '/home/routenzug/cartographer_ros_ws/install_isolated/share/cartographer/configuration_files/trajectory_builder_3d.lua' for 'trajectory_builder_3d.lua'.
+[ INFO] [1563519161.845899557]: I0719 08:52:41.000000 21013 configuration_file_resolver.cc:41] Found '/home/routenzug/cartographer_ros_ws/install_isolated/share/cartographer/configuration_files/trajectory_builder_3d.lua' for 'trajectory_builder_3d.lua'.
+[ INFO] [1563519161.992658842]: I0719 08:52:41.000000 21013 submap_2d.cc:187] Added submap 1
+[ INFO] [1563519161.992782002]: I0719 08:52:41.000000 21013 map_builder_bridge.cc:130] Added trajectory with ID '0'.
+[ INFO] [1563519162.549668432]: I0719 08:52:42.000000 21013 ordered_multi_queue.cc:172] All sensor data for trajectory 0 is available starting at '636991159621938509'.
+[ WARN] [1563519163.123149385]: W0719 08:52:43.000000 21013 pose_extrapolator.cc:168] Queue too short for velocity estimation. Queue duration: 0 ms
+[ INFO] [1563519177.505941249]: I0719 08:52:57.000000 21013 collated_trajectory_builder.cc:72] points2 rate: 10.95 Hz 9.13e-02 s +/- 1.76e-02 s (pulsed at 16.49% real time)
+[cartographer_node-2] process has died [pid 21013, exit code -9, cmd /home/routenzug/cartographer_ros_ws/install_isolated/lib/cartographer_ros/cartographer_node -configuration_directory /home/routenzug/cartographer_ros_ws/install_isolated/share/cartographer_ros/configuration_files -configuration_basename kinect-v2_rgbd_2D0_ohne_imu.lua /points2:=kinect2/hd/points __name:=cartographer_node __log:=/home/routenzug/.ros/log/c0bdf5be-a9f1-11e9-ad96-78d004277d70/cartographer_node-2.log].
+log file: /home/routenzug/.ros/log/c0bdf5be-a9f1-11e9-ad96-78d004277d70/cartographer_node-2*.log
+^C[cartographer_occupancy_grid_node-4] killing on exit
+[rviz-3] killing on exit
+[robot_state_publisher-1] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+done
+

@@ -1,0 +1,242 @@
+routenzug@routenzug-Nuvo-7000-Series:~$ roslaunch kinect2_bridge kinect2_bridge.launch 
+... logging to /home/routenzug/.ros/log/c0bdf5be-a9f1-11e9-ad96-78d004277d70/roslaunch-routenzug-Nuvo-7000-Series-20676.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+WARNING: disk usage in log directory [/home/routenzug/.ros/log] is over 1GB.
+It's recommended that you use the 'rosclean' command.
+
+started roslaunch server http://routenzug-Nuvo-7000-Series:46187/
+
+SUMMARY
+========
+
+PARAMETERS
+ * /kinect2_bridge/base_name: kinect2
+ * /kinect2_bridge/base_name_tf: kinect2
+ * /kinect2_bridge/bilateral_filter: True
+ * /kinect2_bridge/calib_path: /home/routenzug/r...
+ * /kinect2_bridge/depth_device: -1
+ * /kinect2_bridge/depth_method: default
+ * /kinect2_bridge/edge_aware_filter: True
+ * /kinect2_bridge/fps_limit: -1.0
+ * /kinect2_bridge/jpeg_quality: 90
+ * /kinect2_bridge/max_depth: 12.0
+ * /kinect2_bridge/min_depth: 0.1
+ * /kinect2_bridge/png_level: 1
+ * /kinect2_bridge/publish_tf: False
+ * /kinect2_bridge/queue_size: 5
+ * /kinect2_bridge/reg_device: -1
+ * /kinect2_bridge/reg_method: default
+ * /kinect2_bridge/sensor: 
+ * /kinect2_bridge/use_png: False
+ * /kinect2_bridge/worker_threads: 4
+ * /kinect2_points_xyzrgb_hd/queue_size: 5
+ * /kinect2_points_xyzrgb_qhd/queue_size: 5
+ * /kinect2_points_xyzrgb_sd/queue_size: 5
+ * /rosdistro: kinetic
+ * /rosversion: 1.12.14
+
+NODES
+  /
+    kinect2 (nodelet/nodelet)
+    kinect2_bridge (nodelet/nodelet)
+    kinect2_points_xyzrgb_hd (nodelet/nodelet)
+    kinect2_points_xyzrgb_qhd (nodelet/nodelet)
+    kinect2_points_xyzrgb_sd (nodelet/nodelet)
+
+ROS_MASTER_URI=http://localhost:11311
+
+process[kinect2-1]: started with pid [20693]
+process[kinect2_bridge-2]: started with pid [20694]
+process[kinect2_points_xyzrgb_sd-3]: started with pid [20695]
+process[kinect2_points_xyzrgb_qhd-4]: started with pid [20696]
+[ INFO] [1563519148.873793607]: Loading nodelet /kinect2_bridge of type kinect2_bridge/kinect2_bridge_nodelet to manager kinect2 with the following remappings:
+process[kinect2_points_xyzrgb_hd-5]: started with pid [20708]
+[ INFO] [1563519148.876361880]: waitForService: Service [/kinect2/load_nodelet] has not been advertised, waiting...
+[ INFO] [1563519148.898506997]: Initializing nodelet with 12 worker threads.
+[ INFO] [1563519148.917771406]: waitForService: Service [/kinect2/load_nodelet] is now available.
+[ INFO] [1563519149.081848219]: [Kinect2Bridge::initialize] parameter:
+        base_name: kinect2
+           sensor: default
+        fps_limit: -1
+       calib_path: /home/routenzug/rgbdslam_v2/rgbdslam_catkin_ws/src/iai_kinect2/kinect2_bridge/data/
+          use_png: false
+     jpeg_quality: 90
+        png_level: 1
+     depth_method: default
+     depth_device: -1
+       reg_method: default
+       reg_device: -1
+        max_depth: 12
+        min_depth: 0.1
+       queue_size: 5
+ bilateral_filter: true
+edge_aware_filter: true
+       publish_tf: false
+     base_name_tf: kinect2
+   worker_threads: 4
+[Info] [CudaDepthPacketProcessorImpl] device 0: GeForce GTX 1060 6GB @ 1835MHz Memory 6071MB
+[Info] [CudaDepthPacketProcessorImpl] selected device 0
+[Info] [Freenect2Impl] enumerating devices...
+[Info] [Freenect2Impl] 8 usb devices connected
+[Info] [Freenect2Impl] found valid Kinect v2 @2:6 with serial 000541460647
+[Info] [Freenect2Impl] found 1 devices
+[ INFO] [1563519149.246441913]: [Kinect2Bridge::initDevice] Kinect2 devices found: 
+[ INFO] [1563519149.246481832]: [Kinect2Bridge::initDevice]   0: 000541460647 (selected)
+[Info] [Freenect2DeviceImpl] opening...
+[Info] [Freenect2DeviceImpl] transfer pool sizes rgb: 20*16384 ir: 60*8*33792
+[Info] [Freenect2DeviceImpl] opened
+[ INFO] [1563519149.357416871]: [Kinect2Bridge::initDevice] starting kinect2
+[Info] [Freenect2DeviceImpl] starting...
+[Info] [Freenect2DeviceImpl] submitting rgb transfers...
+[Info] [Freenect2DeviceImpl] submitting depth transfers...
+[Info] [Freenect2DeviceImpl] started
+[ INFO] [1563519149.745128169]: [Kinect2Bridge::initDevice] device serial: 000541460647
+[ INFO] [1563519149.745215249]: [Kinect2Bridge::initDevice] device firmware: 4.0.3916.0
+[Info] [Freenect2DeviceImpl] stopping...
+[Info] [Freenect2DeviceImpl] canceling rgb transfers...
+[Info] [Freenect2DeviceImpl] canceling depth transfers...
+[Info] [Freenect2DeviceImpl] stopped
+[ERROR] [1563519149.988770784]: [Kinect2Bridge::loadCalibrationFile] can't open calibration file: /home/routenzug/rgbdslam_v2/rgbdslam_catkin_ws/src/iai_kinect2/kinect2_bridge/data/000541460647/calib_ir.yaml
+[ WARN] [1563519149.988838742]: [Kinect2Bridge::initCalibration] using sensor defaults for ir intrinsic parameters.
+[ INFO] [1563519150.011647404]: [DepthRegistration::New] Using OpenCL registration method!
+[ INFO] [1563519150.011736050]: [DepthRegistration::New] Using OpenCL registration method!
+X server found. dri2 connection failed! 
+DRM_IOCTL_I915_GEM_APERTURE failed: Invalid argument
+Assuming 131072kB available aperture size.
+May lead to reduced performance or incorrect rendering.
+get chip id failed: -1 [22]
+param: 4, val: 0
+X server found. dri2 connection failed! 
+DRM_IOCTL_I915_GEM_APERTURE failed: Invalid argument
+Assuming 131072kB available aperture size.
+May lead to reduced performance or incorrect rendering.
+get chip id failed: -1 [22]
+param: 4, val: 0
+beignet-opencl-icd: no supported GPU found, this is probably the wrong opencl-icd package for this hardware
+(If you have multiple ICDs installed and OpenCL works, you can ignore this message)
+[ INFO] [1563519150.226547095]: [DepthRegistrationOpenCL::init] devices:
+[ INFO] [1563519150.227199640]: [DepthRegistrationOpenCL::init]   0: GeForce GTX 1060 6GB
+[ INFO] [1563519150.227444356]: [DepthRegistrationOpenCL::init] selected device: GeForce GTX 1060 6GB
+X server found. dri2 connection failed! 
+DRM_IOCTL_I915_GEM_APERTURE failed: Invalid argument
+Assuming 131072kB available aperture size.
+May lead to reduced performance or incorrect rendering.
+get chip id failed: -1 [22]
+param: 4, val: 0
+beignet-opencl-icd: no supported GPU found, this is probably the wrong opencl-icd package for this hardware
+(If you have multiple ICDs installed and OpenCL works, you can ignore this message)
+[ INFO] [1563519150.402767172]: [DepthRegistrationOpenCL::init] devices:
+[ INFO] [1563519150.402899899]: [DepthRegistrationOpenCL::init]   0: GeForce GTX 1060 6GB
+[ INFO] [1563519150.402992499]: [DepthRegistrationOpenCL::init] selected device: GeForce GTX 1060 6GB
+[ INFO] [1563519150.484158493]: [Kinect2Bridge::callbackStatus] client connected. starting device...
+[Info] [Freenect2DeviceImpl] starting...
+[ INFO] [1563519150.491286670]: [Kinect2Bridge::main] waiting for clients to connect
+[Info] [Freenect2DeviceImpl] submitting depth transfers...
+[Info] [Freenect2DeviceImpl] started
+[Info] [Freenect2DeviceImpl] stopping...
+[Info] [Freenect2DeviceImpl] canceling depth transfers...
+[Info] [Freenect2DeviceImpl] stopped
+[Info] [Freenect2DeviceImpl] starting...
+[Info] [Freenect2DeviceImpl] submitting rgb transfers...
+[Info] [Freenect2DeviceImpl] submitting depth transfers...
+[Info] [Freenect2DeviceImpl] started
+[Info] [DepthPacketStreamParser] -4 packets were lost
+[ INFO] [1563519153.546485969]: [Kinect2Bridge::main] depth processing: ~9.55475ms (~104.66Hz) publishing rate: ~25.6258Hz
+[ INFO] [1563519153.546525771]: [Kinect2Bridge::main] color processing: ~3.70195e+185ms (~2.70128e-183Hz) publishing rate: ~21.965Hz
+[Info] [CudaDepthPacketProcessor] avg. time: 1.09916ms -> ~909.786Hz
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 17.9241ms -> ~55.791Hz
+[ INFO] [1563519156.552713946]: [Kinect2Bridge::main] depth processing: ~10.4131ms (~96.0326Hz) publishing rate: ~29.9378Hz
+[ INFO] [1563519156.552762658]: [Kinect2Bridge::main] color processing: ~16.083ms (~62.1776Hz) publishing rate: ~29.9378Hz
+[Info] [CudaDepthPacketProcessor] avg. time: 1.02774ms -> ~973.013Hz
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 17.539ms -> ~57.0159Hz
+[ INFO] [1563519159.555148669]: [Kinect2Bridge::main] depth processing: ~10.1995ms (~98.0444Hz) publishing rate: ~29.9757Hz
+[ INFO] [1563519159.555202870]: [Kinect2Bridge::main] color processing: ~16.028ms (~62.3909Hz) publishing rate: ~29.9757Hz
+[Info] [CudaDepthPacketProcessor] avg. time: 1.05354ms -> ~949.181Hz
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 17.2269ms -> ~58.0487Hz
+[ INFO] [1563519162.557835756]: [Kinect2Bridge::main] depth processing: ~10.8851ms (~91.8689Hz) publishing rate: ~29.9733Hz
+[ INFO] [1563519162.557892250]: [Kinect2Bridge::main] color processing: ~17.3907ms (~57.5019Hz) publishing rate: ~29.6402Hz
+[Info] [CudaDepthPacketProcessor] avg. time: 1.11546ms -> ~896.493Hz
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 18.9333ms -> ~52.817Hz
+[ INFO] [1563519165.563151606]: [Kinect2Bridge::main] depth processing: ~11.4329ms (~87.4666Hz) publishing rate: ~30.2802Hz
+[ INFO] [1563519165.563246142]: [Kinect2Bridge::main] color processing: ~18.9108ms (~52.8799Hz) publishing rate: ~29.9475Hz
+[Info] [CudaDepthPacketProcessor] avg. time: 1.16084ms -> ~861.447Hz
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 19.3677ms -> ~51.6325Hz
+[ INFO] [1563519168.567503823]: [Kinect2Bridge::main] depth processing: ~12.2366ms (~81.7218Hz) publishing rate: ~29.9559Hz
+[ INFO] [1563519168.567554243]: [Kinect2Bridge::main] color processing: ~19.4779ms (~51.3403Hz) publishing rate: ~30.2888Hz
+[Info] [CudaDepthPacketProcessor] avg. time: 1.15522ms -> ~865.633Hz
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 19.378ms -> ~51.6049Hz
+[ INFO] [1563519171.571894176]: [Kinect2Bridge::main] depth processing: ~11.8525ms (~84.3707Hz) publishing rate: ~29.9568Hz
+[ INFO] [1563519171.571995100]: [Kinect2Bridge::main] color processing: ~19.1218ms (~52.2963Hz) publishing rate: ~29.9568Hz
+[Info] [CudaDepthPacketProcessor] avg. time: 1.15428ms -> ~866.338Hz
+[ INFO] [1563519174.575489612]: [Kinect2Bridge::main] depth processing: ~11.424ms (~87.5347Hz) publishing rate: ~29.9633Hz
+[ INFO] [1563519174.575535930]: [Kinect2Bridge::main] color processing: ~19.2577ms (~51.9272Hz) publishing rate: ~29.9633Hz
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 18.5901ms -> ~53.792Hz
+[Info] [CudaDepthPacketProcessor] avg. time: 1.18582ms -> ~843.299Hz
+[ INFO] [1563519177.581975386]: [Kinect2Bridge::main] depth processing: ~11.6814ms (~85.6059Hz) publishing rate: ~29.9355Hz
+[ INFO] [1563519177.582035298]: [Kinect2Bridge::main] color processing: ~20.9098ms (~47.8244Hz) publishing rate: ~29.9355Hz
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 19.6678ms -> ~50.8446Hz
+[ INFO] [1563519180.585886651]: [Kinect2Bridge::main] depth processing: ~11.6382ms (~85.924Hz) publishing rate: ~29.9609Hz
+[ INFO] [1563519180.585946777]: [Kinect2Bridge::main] color processing: ~20.4232ms (~48.964Hz) publishing rate: ~29.9609Hz
+[Info] [CudaDepthPacketProcessor] avg. time: 1.19788ms -> ~834.807Hz
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 19.7619ms -> ~50.6025Hz
+[ INFO] [1563519183.592609331]: [Kinect2Bridge::main] depth processing: ~11.266ms (~88.7628Hz) publishing rate: ~27.9374Hz
+[ INFO] [1563519183.592647039]: [Kinect2Bridge::main] color processing: ~21.7659ms (~45.9434Hz) publishing rate: ~27.6048Hz
+[Info] [DepthPacketStreamParser] 7 packets were lost
+[Error] [usb::TransferPool] failed to submit transfer: LIBUSB_ERROR_IO Input/Output Error
+[Info] [CudaDepthPacketProcessor] avg. time: 1.29781ms -> ~770.531Hz
+[Info] [DepthPacketStreamParser] 24 packets were lost
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 20.7414ms -> ~48.2127Hz
+[Error] [usb::TransferPool] failed to submit transfer: LIBUSB_ERROR_IO Input/Output Error
+[Error] [usb::TransferPool] failed to submit transfer: LIBUSB_ERROR_IO Input/Output Error
+[ INFO] [1563519188.183966167]: [Kinect2Bridge::main] depth processing: ~15.8441ms (~63.115Hz) publishing rate: ~17.6468Hz
+[Info] [DepthPacketStreamParser] 53 packets were lost
+[ INFO] [1563519188.199201288]: [Kinect2Bridge::main] color processing: ~35.4057ms (~28.244Hz) publishing rate: ~14.3172Hz
+[Error] [usb::TransferPool] failed to submit transfer: LIBUSB_ERROR_IO Input/Output Error
+[Info] [DepthPacketStreamParser] 23 packets were lost
+[ INFO] [1563519190.322203859]: [Kinect2Bridge::main] depth processing: ~19.7486ms (~50.6366Hz) publishing rate: ~6.9911Hz
+[ INFO] [1563519190.326612922]: [Kinect2Bridge::main] color processing: ~75.4827ms (~13.2481Hz) publishing rate: ~4.99364Hz
+[Error] [usb::TransferPool] failed to submit transfer: LIBUSB_ERROR_IO Input/Output Error
+[Info] [DepthPacketStreamParser] 30 packets were lost
+[Error] [usb::TransferPool] failed to submit transfer: LIBUSB_ERROR_IO Input/Output Error
+[Error] [usb::TransferPool] failed to submit transfer: LIBUSB_ERROR_IO Input/Output Error
+[Error] [usb::TransferPool] failed to submit transfer: LIBUSB_ERROR_IO Input/Output Error
+[Error] [usb::TransferPool] failed to submit transfer: LIBUSB_ERROR_IO Input/Output Error
+[Error] [usb::TransferPool] failed to submit transfer: LIBUSB_ERROR_IO Input/Output Error
+[ INFO] [1563519192.610157585]: [Kinect2Bridge::main] depth processing: ~48.8722ms (~20.4615Hz) publishing rate: ~7.64248Hz
+[ INFO] [1563519192.610210428]: [Kinect2Bridge::main] color processing: ~240.36ms (~4.16043Hz) publishing rate: ~5.98107Hz
+[Info] [DepthPacketStreamParser] 29 packets were lost
+[Info] [CudaDepthPacketProcessor] avg. time: 9.03066ms -> ~110.734Hz
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 21.5602ms -> ~46.3818Hz
+[ INFO] [1563519195.613434734]: [Kinect2Bridge::main] depth processing: ~10.6434ms (~93.9546Hz) publishing rate: ~29.9586Hz
+[ INFO] [1563519195.613477648]: [Kinect2Bridge::main] color processing: ~17.7753ms (~56.2578Hz) publishing rate: ~29.9586Hz
+[Info] [CudaDepthPacketProcessor] avg. time: 1.07634ms -> ~929.077Hz
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 17.7098ms -> ~56.4658Hz
+[ INFO] [1563519198.614537121]: [Kinect2Bridge::main] depth processing: ~10.6423ms (~93.9647Hz) publishing rate: ~29.989Hz
+[ INFO] [1563519198.614580120]: [Kinect2Bridge::main] color processing: ~16.4124ms (~60.9295Hz) publishing rate: ~29.989Hz
+[Info] [CudaDepthPacketProcessor] avg. time: 1.04851ms -> ~953.734Hz
+[Info] [TurboJpegRgbPacketProcessor] avg. time: 17.396ms -> ~57.4845Hz
+[ INFO] [1563519201.615616477]: [Kinect2Bridge::main] depth processing: ~10.7223ms (~93.2637Hz) publishing rate: ~29.9892Hz
+[ INFO] [1563519201.615655459]: [Kinect2Bridge::main] color processing: ~14.3069ms (~69.8962Hz) publishing rate: ~29.9892Hz
+[Info] [Freenect2DeviceImpl] stopping...
+[Info] [Freenect2DeviceImpl] canceling rgb transfers...
+[Info] [Freenect2DeviceImpl] canceling depth transfers...
+[Info] [Freenect2DeviceImpl] stopped
+[Info] [Freenect2DeviceImpl] starting...
+[Info] [Freenect2DeviceImpl] submitting rgb transfers...
+[Info] [Freenect2DeviceImpl] started
+[ INFO] [1563519202.380971771]: [Kinect2Bridge::callbackStatus] no clients connected. stopping device...
+[Info] [Freenect2DeviceImpl] stopping...
+[Info] [Freenect2DeviceImpl] canceling rgb transfers...
+[Info] [Freenect2DeviceImpl] stopped
+^C[kinect2_points_xyzrgb_hd-5] killing on exit
+[kinect2_points_xyzrgb_qhd-4] killing on exit
+[kinect2_points_xyzrgb_sd-3] killing on exit
+[kinect2_bridge-2] killing on exit
+[kinect2-1] killing on exit
+[ INFO] [1563519238.845413357]: Unloading nodelet /kinect2_bridge from manager kinect2
+[kinect2-1] escalating to SIGTERM
+shutting down processing monitor...
+... shutting down processing monitor complete
+done
+routenzug@routenzug-Nuvo-7000-Series:~$ 
