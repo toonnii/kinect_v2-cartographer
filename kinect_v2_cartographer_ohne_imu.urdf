@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<robot name="kinect_v2">
+ 
+	<link name="map">
+ 	</link>
+  	<link name="base_link">
+ 	</link>
+	<link name="kinect_base">
+	</link>
+	<link name="kinect_base_rot">
+	</link>
+	<link name="kinect2_rgb_optical_frame">
+	</link>
+
+  <joint name="map_to_base_link" type="fixed">
+    <parent link="map"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+  <joint name="base_link_to_kinect_base" type="fixed">
+    <parent link="base_link"/>
+    <child link="kinect_base"/>
+    <origin xyz="-0.3 -0.26 0"/>
+  </joint>
+
+  <joint name="kinect_base_to_kinect_base_rot" type="fixed">
+    <parent link="kinect_base"/>
+    <child link="kinect_base_rot"/>
+    <origin rpy="0 1.5708 0" xyz="0 0 0"/>
+  </joint>
+
+  <joint name="kinect_base_rot_to_kinect_optical_frame" type="fixed">
+    <parent link="kinect_base_rot"/>
+    <child link="kinect2_rgb_optical_frame"/>
+    <origin rpy=" -1.5708 0 0" xyz="-0.72 0 0"/>
+  </joint>
+
+</robot>
